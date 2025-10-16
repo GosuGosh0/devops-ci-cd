@@ -100,7 +100,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
-        name: Test the site
+      - name: Test the site
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} run validate \
       - name: Build with Astro
